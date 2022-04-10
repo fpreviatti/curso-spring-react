@@ -11,6 +11,8 @@ class ListEmployeeComponent extends Component {
             employees: []
         }
 
+        this.addEmployee = this.addEmployee.bind(this);
+
     }
 
     componentDidMount(){
@@ -21,11 +23,21 @@ class ListEmployeeComponent extends Component {
         })
     }
 
+    addEmployee(){
+        this.props.history.push('/add-employee');
+    }
+
     render() {
         return (
             <div>
 
                 <h2 classname="text-center">Employees List</h2>
+
+                <div className = "row">
+
+                    <button className="btn btn-primary" onClick={this.addEmployee}>Add Employee</button>
+
+                </div>
                 
                 <div className="row">
 
@@ -56,7 +68,6 @@ class ListEmployeeComponent extends Component {
                                 </tr>
                             )
                         }
-
 
                        </tbody>
 
