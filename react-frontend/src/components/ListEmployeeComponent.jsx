@@ -31,7 +31,7 @@ class ListEmployeeComponent extends Component {
         return (
             <div>
 
-                <h2 classname="text-center">Employees List</h2>
+                <h2 className="text-center">Employees List</h2>
 
                 <div className = "row">
 
