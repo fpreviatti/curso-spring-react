@@ -9,7 +9,7 @@ function App() {
   return (
     <div>
       <Router>
-        <div className="container">
+        
           <HeaderComponent />
 
           <div className="container">
@@ -20,7 +20,6 @@ function App() {
             </Switch>
           </div>
           <FooterComponent />
-        </div>
       </Router>
     </div>
   );
