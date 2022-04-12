@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
 import EmployeeService from '../services/EmployeeService';
 
 class UpdateEmployeeComponent extends Component {
@@ -14,6 +14,7 @@ class UpdateEmployeeComponent extends Component {
         this.changeFirstNameHandler = this.changeFirstNameHandler.bind(this);
         this.changeLastNameHandler = this.changeLastNameHandler.bind(this);
         this.updateEmployee = this.updateEmployee.bind(this);
+        
     }
 
     componentDidMount(){
@@ -30,9 +31,10 @@ class UpdateEmployeeComponent extends Component {
         e.preventDefault();
         let employee = {firstName: this.state.firstName, lastName: this.state.lastName, emailId: this.state.emailId};
         console.log('employee => ' + JSON.stringify(employee));
-        console.log('id => ' + JSON.stringify(this.state.id));
-        EmployeeService.updateEmployee(employee, this.state.id).then( res => {
+        EmployeeService.updateEmployee(employee,this.state.id).then(res => {
+
             this.props.history.push('/employees');
+
         });
     }
     
@@ -91,4 +93,4 @@ class UpdateEmployeeComponent extends Component {
     }
 }
 
-export default UpdateEmployeeComponent;
+export default UpdateEmployeeComponent
