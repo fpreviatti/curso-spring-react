@@ -53,13 +53,13 @@ class CreateEmployeeComponent extends Component {
         <div className="container">
           <div className="row">
             <div className="card col-md-6 offset-md-3 offset-md-3">
-              <h3 className="text-center">Add Employee</h3>
+              <h3 className="text-center">Novo colaborador</h3>
               <div className="card-body">
                 <form>
                   <div className="form-group">
-                    <label>First Name:</label>
+                    <label>Nome</label>
                     <input
-                      placeholder="First Name"
+                      placeholder="Digite o nome"
                       name="firstName"
                       className="form-control"
                       value={this.state.firstName}
@@ -68,9 +68,9 @@ class CreateEmployeeComponent extends Component {
                   </div>
 
                   <div className="form-group">
-                    <label>Last Name:</label>
+                    <label>Sobrenome</label>
                     <input
-                      placeholder="Last Name"
+                      placeholder="Digite o sobrenome"
                       name="lastName"
                       className="form-control"
                       value={this.state.lastName}
@@ -79,9 +79,9 @@ class CreateEmployeeComponent extends Component {
                   </div>
 
                   <div className="form-group">
-                    <label>Email Adress:</label>
+                    <label>Email</label>
                     <input
-                      placeholder="Email Address:"
+                      placeholder="Digite o email"
                       name="emailId"
                       className="form-control"
                       value={this.state.emailId}
@@ -89,19 +89,28 @@ class CreateEmployeeComponent extends Component {
                     ></input>
                   </div>
 
+                  <div>
+
                   <button
                     className="btn btn-success"
                     onClick={this.saveEmployee}
+                    
                   >
-                    Save
+                    Salvar
                   </button>
                   <button
                     className="btn btn-danger"
                     onClick={this.cancel.bind(this)}
                     style={{ marginLeft: "10px" }}
                   >
-                    Cancel
+                    Cancelar
                   </button>
+
+
+
+                  </div>
+
+                  
                 </form>
               </div>
             </div>

@@ -14,7 +14,7 @@ class FooterComponent extends Component {
             <div>
                 <footer className="footer">
 
-                <span className="text-muted">All Rights Reserved</span>
+                <div className="text-muted">Todos os direitos reservados</div>
 
                 </footer>
             </div>

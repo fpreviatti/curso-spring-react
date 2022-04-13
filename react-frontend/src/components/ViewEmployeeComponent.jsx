@@ -22,19 +22,19 @@ class ViewEmployeeComponent extends Component {
     return (
       <div>
         <div className="card col-md-6 offset-md-3">
-          <h3 className="text-center">View Employee Details</h3>
+          <h3 className="text-center">Detalhes do colaborador</h3>
 
           <div className="card-body">
             <div className="row">
-              <label>Employee First Name:</label>
+              <label>Nome:</label>
               <div>{this.state.employee.firstName}</div>
             </div>
             <div className="row">
-              <label>Employee Last Name:</label>
+              <label>Sobrenome:</label>
               <div>{this.state.employee.lastName}</div>
             </div>
             <div className="row">
-              <label>Employee Email:</label>
+              <label>Email:</label>
               <div>{this.state.employee.emailId}</div>
             </div>
           </div>
