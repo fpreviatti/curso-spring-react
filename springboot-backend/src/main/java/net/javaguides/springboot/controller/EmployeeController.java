@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.time.LocalDateTime;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -26,6 +27,8 @@ public class EmployeeController {
 
     @PostMapping("/employees")
     public Employee addEmployee(@RequestBody Employee employee){
+        employee.setCreated(LocalDateTime.now());
+        employee.setUpdated(LocalDateTime.now());
         return employeeRepository.save(employee);
     }
 
@@ -42,6 +45,7 @@ public class EmployeeController {
         Employee employee = employeeRepository.findById(id).
                 orElseThrow(() -> new ResourceNotFoundException("Employee not found with id: " +id));
 
+        employee.setUpdated(LocalDateTime.now());
         employee.setFirstName(employeeDetails.getFirstName());
         employee.setLastName(employeeDetails.getLastName());
         employee.setEmailId(employeeDetails.getEmailId());

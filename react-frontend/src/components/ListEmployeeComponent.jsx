@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import EmployeeService from '../services/EmployeeService';
+import { compareAsc, format } from 'date-fns'
 
 class ListEmployeeComponent extends Component {
 
@@ -69,6 +70,7 @@ class ListEmployeeComponent extends Component {
                                 <th>Sobrenome</th>
                                 <th>Email</th>
                                 <th>Ações</th>
+                                <th>Última alteração</th>
                             </tr>
 
                        </thead>
@@ -89,6 +91,7 @@ class ListEmployeeComponent extends Component {
                                         <button style ={{marginLeft: "10px"}}onClick={() => this.deleteEmployee(employee.id)} className="btn btn-danger">Apagar</button>
                                         <button style ={{marginLeft: "10px"}}onClick={() => this.viewEmployee(employee.id)} className="btn btn-info">Detalhes</button>
                                     </td>
+                                    <td>{format(new Date(employee.updated), 'yyyy-MM-dd')}</td>
                                 </tr>
                             )
                         }

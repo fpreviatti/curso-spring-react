@@ -1,6 +1,7 @@
 package net.javaguides.springboot.model;
 
 import javax.persistence.*;
+import java.time.LocalDateTime;
 
 @Entity
 @Table(name = "employees")
@@ -18,6 +19,12 @@ public class Employee {
 
     @Column(name = "email_id")
     private String emailId;
+
+    @Column(name = "created")
+    private LocalDateTime created;
+
+    @Column(name = "updated")
+    private LocalDateTime updated;
 
     public Employee(){
 
@@ -60,5 +67,21 @@ public class Employee {
 
     public void setEmailId(String emailId) {
         this.emailId = emailId;
+    }
+
+    public LocalDateTime getCreated() {
+        return created;
+    }
+
+    public void setCreated(LocalDateTime created) {
+        this.created = created;
+    }
+
+    public LocalDateTime getUpdated() {
+        return updated;
+    }
+
+    public void setUpdated(LocalDateTime updated) {
+        this.updated = updated;
     }
 }
